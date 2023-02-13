@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'mixins';
+
+.cl-root__section {
+position: absolute;
+  top: $header-height + 20px;
+
+  &__header {
+    color: darkgoldenrod;
+  }
+
+  &__body {
+    color: aqua;
+    font-size: 40px;
+  }
+
+  &__footer {
+    color: red;
+  }
+}
+
