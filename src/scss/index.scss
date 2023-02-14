@@ -6,21 +6,107 @@
 @import 'section';
 @import 'footer';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.root-grid {
+  display: grid;
+
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  gap: 0px;
+  height: 100vh;
+
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
+.score-container {
+  background-color: #F98DF9;
+  grid-row-start: 3;
+  grid-column-start: 1;
+
+  grid-row-end: 4;
+  grid-column-end: 2;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
-// 'cl' - custom layout -> root class
-.cl-root {
-  position: relative;
-  color: blueviolet;
+.digits-container {
+  background-color: #CC5AD5;
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-end: 4;
+  grid-column-end: 3;
+}
+
+.spin-container {
+  background-color: #96DB5B;
+  grid-row-start: 2;
+  grid-column-start: 3;
+  grid-row-end: 3;
+  grid-column-end: 4;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.options-container {
+
+  background-color: #5AA969;
+  grid-row-start: 1;
+  grid-column-start: 4;
+
+  grid-row-end: 2;
+  grid-column-end: 5;
+
+}
+
+.menu-container {
+
+  background-color: #C988E6;
+  grid-row-start: 3;
+  grid-column-start: 4;
+
+  grid-row-end: 4;
+  grid-column-end: 5;
+
+}
+
+h1 {
+  display: block;
+  margin-left: 20px;
+  font-size: 48px;
+  background:-webkit-linear-gradient(270deg, rgba(207, 191, 159, 1) 51%, rgba(117, 89, 13, 1) 81%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button {
+  width: 200px;
+  height: 200px;
+padding: 16px;
+
+  background: linear-gradient(220deg, rgba(122, 98, 44, 1) 10%, rgba(229, 220, 149, 1) 50%, rgba(122, 98, 44, 1) 90%);
+  border-radius: 116px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button > div {
+  width: 100%;
   height: 100%;
-  max-width: 100%;
+  border-radius: 100px;
+
+
+
+  background: radial-gradient(circle at 50% 50%, rgba(47, 169, 207, 1) 0%, rgba(47, 169, 207, 1) 50%, rgba(51, 67, 60, 1) 89%);
+  color: #c7bb9f;
+  text-transform: uppercase;
+  font-size: 52px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
